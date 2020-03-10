@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Technical Documentation</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<nav id="navbar">
+		<header>
+			<h1>Getting started with HTML</h1>
+		</header>
+
+		<a href="#What_is_HTML?" class="nav-link">
+			What is HTML?
+		</a>
+		<a href="#Anatomy_of_an_HTML_element" class="nav-link">
+			Anatomy of an HTML element
+		</a>
+		<a href="#Attributes" class="nav-link">
+			Attributes
+		</a>
+		<a href="#Anatomy_of_an_HTML_document" class="nav-link">
+			Anatomy of an HTML document
+		</a>
+		<a href="#HTML_comments" class="nav-link">
+			HTML comments
+		</a>
+		<a href="#Reference" class="nav-link">
+			Reference
+		</a>
+	</nav>
+
+	<main id="main-doc">
+		<section class="main-section" id="What_is_HTML?">
+			<header>
+				<h1>What is HTML?</h1>
+			</header>
+
+			<p>
+				HTML (Hypertext Markup Language) is not a programming language;
+				it is a markup language used to tell your browser how to structure the web pages you visit.
+				It can be as complicated or as simple as the web developer wishes it to be.
+				HTML consists of a series of elements, which you use to enclose, wrap,
+				or mark up different parts of the content to make it appear or act a certain way.
+				The enclosing tags can make a bit of content into a hyperlink to link to another page on the web,
+				italicize words, and so on.  For example, take the following line of content:
+			</p>
+			<br>
+			<code>
+				My cat is very grumpy
+			</code>
+			<br>
+			<p>
+				If we wanted the line to stand by itself, we could specify that it
+				is a paragraph by enclosing it in a paragraph
+				(<code>&#60;p&#62;</code>) element:
+			</p>
+			<br>
+			<code>
+				&#60;p&#62;My cat is very grumpy&#60;/p&#62;
+			</code>
+		</section>
+
+		<section class="main-section" id="Anatomy_of_an_HTML_element">
+			<header>
+				<h1>Anatomy of an HTML element</h1>
+			</header>
+
+			<p>Let's explore our paragraph element a bit further:</p>
+			<br>
+			<img
+				src="https://media.prod.mdn.mozit.cloud/attachments/2014/11/14/9347/c07aa313dbdd667585430f4eca354dbd/grumpy-cat-small.png"
+				alt="an image explaining about the paragraph element">
+			<br>
+			<p>The main parts of our element are:</p>
+			<ul>
+				<li>
+					<p>
+						<strong>The opening tag:</strong>
+						This consists of the name of the element (in this case, p),
+						wrapped in opening and closing angle brackets. This states where
+						the element begins or starts to take effect — in this case where
+						the start of the paragraph is.
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong>The closing tag:</strong>
+						This is the same as the opening tag, except that it includes a
+						forward slash before the element name. This states where the
+						element ends — in this case where the end of the paragraph is.
+						Failing to include a closing tag is a common beginner error and
+						can lead to strange results.
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong>The content:</strong>
+						This is the content of the element, which in this case is just text.
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong>The element:</strong>
+						The opening tag plus the closing tag plus the content equals the element.
+					</p>
+				</li>
+			</ul>
+		</section>
+
+		<section class="main-section" id="Attributes">
+			<header>
+				<h1>Attributes</h1>
+			</header>
+
+			<p>Elements can also have attributes, which look like this:</p>
+			<br>
+			<img
+				src="https://media.prod.mdn.mozit.cloud/attachments/2014/11/14/9345/99516bbeb470af58b608d17bb30e53e6/grumpy-cat-attribute-small.png"
+				alt="an image explaining about attribute in a HTML element">
+			<br>
+			<p>
+				Attributes contain extra information about the element that
+				you don't want to appear in the actual content. In this case,
+				the class attribute allows you to give the element an identifying name,
+				that can be used later to target the element with style information and other things.
+			</p>
+			<br>
+			<p>An attribute should have:</p>
+			<ul>
+				<li>
+					<p>
+						A space between it and the element name
+						(or the previous attribute, if the element already
+						has one or more attributes).
+					</p>
+				</li>
+				<li>
+					<p>
+						The attribute name, followed by an equal sign.
+					</p>
+				</li>
+				<li>
+					<p>
+						An attribute value, with opening and
+						closing quote marks wrapped around it.
+					</p>
+				</li>
+			</ul>
+		</section>
+
+		<section class="main-section" id="Anatomy_of_an_HTML_document">
+			<header>
+				<h1>Anatomy of an HTML document</h1>
+			</header>
+
+			<p>
+				That wraps up the basics of individual HTML elements,
+				but they aren't very useful on their own. Now we'll look
+				at how individual elements are combined to form an entire HTML page:
+			</p>
+			<br>
+			<pre>
+				<code>
+					&#60;!DOCTYPE html >
+					&#60;html>
+					&#60;head>
+						&#60;meta charset="utf-8">
+						&#60;title>My test page</title>
+					&#60;/head>
+					&#60;body>
+						&#60;p>This is my page&#60;/p>
+					&#60;/body>
+					&#60;/html>
+				</code>
+			</pre>
+			<br>
+			<p>Here we have:</p>
+			<br>
+			<ol>
+				<li>
+					<p>
+						&#60;!DOCTYPE html>: The doctype. In the mists of time, when HTML was young
+						(about 1991/2), doctypes were meant to act as links to a set of rules
+						that the HTML page had to follow to be considered good HTML, which could
+						mean automatic error checking and other useful things. They used to look
+						something like this:
+					</p>
+					<br>
+					<pre>
+						<code>
+							&#60;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+							"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+						</code>
+					</pre>
+					<br>
+					<p>
+						However, these days no one really cares about them, and they are
+						really just a historical artifact that needs to be included for
+						everything to work right. &#60;!DOCTYPE html> is the shortest string
+						of characters that counts as a valid doctype; that's all you really
+						need to know.
+					</p>
+				</li>
+			</ol>
+		</section>
+
+		<section class="main-section" id="HTML_comments">
+			<header>
+				<h1>HTML comments</h1>
+			</header>
+
+			<p>
+				In HTML, as with most programming languages, there is a
+				mechanism available to write comments in the code — comments are
+				ignored by the browser and are invisible to the user, and their purpose
+				is to allow you to include comments in the code to say how your code works,
+				what the different parts of the code do, and so on. This can be very useful
+				if you return to a code base that you've not worked on for a long time, and
+				can't remember what you did — or if you hand your code over for someone else to work on.
+			</p>
+			<br>
+			<p>
+				To turn a section of HTML content into a comment,
+				you need to wrap it in the special markers
+				<code>&#60;!--</code> and <code>--></code> , for example:
+			</p>
+			<br>
+			<code>
+				<p>I'm not inside a comment</p>
+				<br>
+				&#60;!-- &#60;p>I am!&#60;/p> -->
+			</code>
+		</section>
+
+		<section class="main-section" id="Reference">
+			<header>
+				<h1>Reference</h1>
+			</header>
+
+			<p>
+				All the documentation in this page is taken from
+				<a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">MDN</a>
+			</p>
+		</section>
+	</main>
+</body>
+
+</html>
